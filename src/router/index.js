@@ -7,7 +7,7 @@ const routes = [
     {
         path: "/", 
         component: Home, 
-        redircet: "/welcome",
+        redirect: "/login",
         children: [
             {
                 path: '/welcome',
@@ -27,9 +27,9 @@ const routes = [
     },
 
 ];
-const router = VueRouter.createRouter({
-    history: VueRouter.createWebHashHistory(),
+const router = createRouter({
+    history: createWebHashHistory(),
     routes,
 });
 
-export default router；
+export default router;

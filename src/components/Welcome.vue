@@ -1,12 +1,17 @@
-<script setup>
+<script>
   export default {
-    name: 'welcome'
+    name: 'welcome',
+    methods:{
+      goLogin() {
+        this.$router.push('/login')
+      }
+    }
   }
 </script>
 
 <template>
   <div>欢迎页面</div>
-  <el-button>到登陆页面</el-button>
+  <el-button @click="goLogin">到登陆页面</el-button>
 
 </template>
 
